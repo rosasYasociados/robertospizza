@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roberto’s Pizza · Guerrero Negro, B.C.S.</title>
+<meta name="description" content="Roberto’s Pizza en Guerrero Negro. Pizza en comedor o para llevar, todos los días de 12:00 a 22:00. Llama al 615 157 0615.">
+<link rel="icon" type="image/jpeg" href="logo.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Nunito+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --guinda:#231F20; --vino:#7C1F2A; --tomate:#D4231F; --sol:#FBA84C; --papel:#FFFDF8; --gris:#F3EFEA; --tinta:#2A1410;
+  --display:"Alfa Slab One","Rockwell","Georgia",serif;
+  --texto:"Nunito Sans","Segoe UI",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--texto);color:var(--tinta);background:var(--papel);line-height:1.55;font-size:1.0625rem;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sol);outline-offset:3px}
+.wrap{max-width:62rem;margin:0 auto;padding:0 1.25rem}
+
+/* hero */
+.hero{background:var(--guinda);color:#fff;text-align:center;padding:3rem 0 3.5rem}
+.hero img{width:min(22rem,88vw);height:auto;display:block;margin:0 auto 1rem}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(2.1rem,7vw,3.6rem);line-height:1.1;margin:0 0 .75rem}
+.hero p{margin:0 auto 1.75rem;max-width:30rem;color:#F1DCC8}
+.botones{display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center}
+.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:999px;font-weight:800;text-decoration:none;border:2px solid var(--sol)}
+.btn.llamar{background:var(--sol);color:var(--guinda)}
+.btn.mapa{background:transparent;color:#fff}
+.btn:hover{filter:brightness(1.08)}
+
+/* secciones */
+section{padding:3rem 0}
+h2{font-family:var(--display);font-weight:400;font-size:clamp(1.6rem,5vw,2.2rem);line-height:1.15;margin:0 0 1.25rem;color:var(--vino)}
+.datos{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.dato h3{margin:0 0 .25rem;font-size:1rem;font-weight:800;color:var(--tomate)}
+.dato p{margin:0}
+.grande{font-size:1.35rem;font-weight:800}
+
+.menu{background:var(--gris)}
+.grupos{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr))}
+.grupos h3{font-family:var(--display);font-weight:400;font-size:1.3rem;color:var(--tomate);margin:0 0 .5rem}
+.platos{list-style:none;margin:0;padding:0}
+.platos li{padding:.55rem 0;border-bottom:2px dotted #C9B7A8}
+.platos strong{font-weight:800}
+
+.resena{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.nota{font-family:var(--display);font-size:3rem;color:var(--tomate);line-height:1}
+
+footer{background:var(--guinda);color:#F1DCC8;text-align:center;padding:1.75rem 0;font-size:.95rem}
+footer a{color:var(--sol)}
+@media (min-width:48rem){ .hero{padding:4rem 0 4.5rem} }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img src="logo.jpeg" alt="Logo de Roberto’s Pizza" width="1126" height="928">
+    <h1>Pizza para comer aquí o llevar</h1>
+    <p>Roberto’s Pizza, en Guerrero Negro. Abierto todos los días de 12:00 a 22:00.</p>
+    <div class="botones">
+      <a class="btn llamar" href="tel:+526151570615">Llamar al 615 157 0615</a>
+      <a class="btn mapa" href="https://www.google.com/maps/search/?api=1&query=Roberto%27s+Pizza+Guerrero+Negro" target="_blank" rel="noopener">Cómo llegar</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="visitanos">
+    <div class="wrap">
+      <h2>Visítanos</h2>
+      <div class="datos">
+        <div class="dato">
+          <h3>Horario</h3>
+          <p class="grande">Lunes a domingo</p>
+          <p>12:00 p. m. a 10:00 p. m.</p>
+        </div>
+        <div class="dato">
+          <h3>Teléfono</h3>
+          <p class="grande"><a href="tel:+526151570615">615 157 0615</a></p>
+          <p>Haz tu pedido para llevar por teléfono.</p>
+        </div>
+        <div class="dato">
+          <h3>Dirección</h3>
+          <p>Industrial Salinera, Aeropuerto, Libertad<br>23940 Guerrero Negro, B.C.S.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <h2>Menú</h2>
+      <div class="grupos">
+        <div>
+          <h3>Variedad de pizzas</h3>
+          <ul class="platos">
+            <li>Suprema</li><li>Pepperoni</li><li>Mexicana</li><li>Hawaiana</li><li>Americana</li>
+            <li>Vegetariana</li><li>Cuaresma</li><li>Italiana</li><li>Cheeselover</li><li>Adobada</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Spaguetti</h3>
+          <ul class="platos"><li>Tradicional</li><li>Bolognesa</li><li>Carbonara</li></ul>
+        </div>
+        <div>
+          <h3>Ensaladas y aperitivos</h3>
+          <ul class="platos">
+            <li><strong>Ensaladas:</strong> Clásica, Mediterránea y César</li>
+            <li><strong>Aperitivos:</strong> Nuggets de pollo y alitas BBQ</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="opiniones">
+    <div class="wrap">
+      <h2>Lo que dicen de nosotros</h2>
+      <div class="resena">
+        <div class="nota">4.2</div>
+        <p>Calificación en Google Maps, con más de 230 opiniones de clientes.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    Roberto’s Pizza · Guerrero Negro, B.C.S. ·
+    <a href="tel:+526151570615">615 157 0615</a>
+  </div>
+</footer>
+
+</body>
+</html>
